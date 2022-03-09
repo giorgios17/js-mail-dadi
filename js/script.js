@@ -9,18 +9,28 @@ const email = prompt('Digita la tua email').toLowerCase();
 
 console.log('La tua email è ' + email)
 
-if (email == registeredUsers[0]) {
-    console.log('Accesso effettuato')
+//SOLUZIONE con if ma con limitazione che se pushi altri elementi dentro l' array non li controlla
+
+/* if (email == registeredUsers[0]) {
+     console.log('Accesso effettuato')
+ }
+ else if (email == registeredUsers[1]) {
+     console.log('Accesso effettuato')
+ }
+ else if (email == registeredUsers[2]) {
+     console.log('Accesso effettuato')
+ }
+ else {
+     console.log('Non risulta nessun account registrato con questa email')
+ }*/
+
+for (let i = 0; i < registeredUsers.length; i++) {
+
+    if (email === registeredUsers[i]) {
+        console.log('Accesso effettuato')
+    }
 }
-else if (email == registeredUsers[1]) {
-    console.log('Accesso effettuato')
-}
-else if (email == registeredUsers[2]) {
-    console.log('Accesso effettuato')
-}
-else {
-    console.log('Non risulta nessun account registrato con questa email')
-}
+
 
 
 /*Gioco dei dadi
